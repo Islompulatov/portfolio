@@ -24,6 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mwcm#4d=5yc$r+nk%pw6g$n$)1$b(-#6@zjwjqr=bzxll@f0lh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
